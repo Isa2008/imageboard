@@ -29,6 +29,8 @@ The project was made in one week during my training at SPICED Academy Berlin.
 
 ## Posting comment
 
+By clicking on an image it opens in bigger as an overlay and user's can write comments.
+
 ![Alt Text](comments.gif)
 
 

@@ -4,16 +4,26 @@ This site is a plain Instagram-inspired image-board to upload pictures and post 
 
 It's a single-page application made with:
 
+* HTML
+* CSS / Mobile responsive
 * Vue.js
 * Node.js
 * Express
-* AWS
-* SQL and Postgres:
+* AWS S3
+* Multer
+* PostgreSQL:
 
        Including a database with two tables:
               - Uploading images with title, description and username
               - Posting comments with username
 
+## Demo image-board
+
+![Alt Text](board.gif)
+
+## Uploading image
+
+![Alt Text](uploading.gif)
 
 ## Posting comment
 

@@ -4,9 +4,9 @@ This site is a plain Instagram-inspired image-board to upload pictures and post 
 
 It's a single-page application made with:
 
-* Express
-* Node.js
 * Vue.js
+* Node.js
+* Express
 * AWS
 * SQL and Postgres:
 

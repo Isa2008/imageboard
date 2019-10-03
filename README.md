@@ -9,12 +9,11 @@ It's a single-page application made with:
 * Vue.js
 * AWS
 * SQL
-* Postgres
+* Postgres:
 
-Including a database with two tables:
-
-* Uploading images with title, description and username
-* Posting comments with username
+       * Including a database with two tables:
+              * Uploading images with title, description and username
+              * Posting comments with username
 
 
 ## Posting comment

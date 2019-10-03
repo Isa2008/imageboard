@@ -8,10 +8,8 @@ It's a single-page application made with:
 * Node.js
 * Vue.js
 * AWS
-* SQL
-* Postgres:
-
-       * Including a database with two tables:
+* SQL and Postgres:
+       Including a database with two tables:
               * Uploading images with title, description and username
               * Posting comments with username
 

@@ -21,6 +21,8 @@ It's a single-page application made with:
 
 ![Alt Text](board.gif)
 
+The project was made in one week during my training at SPICED Academy Berlin.
+
 ## Uploading image
 
 ![Alt Text](uploading.gif)

@@ -2,10 +2,10 @@
 
 This site is a plain Instagram-inspired image-board to upload pictures and post comments by users. I named it "Why do we communicate?", to show that inner feelings can be expressed by photos. With these pictures mostly from fashion designers and photographers on the edge, I'd also like to say, dress the way you feel.
 
-It's a single-page application made with:
+It's a single-page framework application made with:
 
 * HTML
-* CSS / Mobile responsive
+* CSS / mobile responsive
 * Vue.js
 * Node.js
 * Express

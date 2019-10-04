@@ -8,6 +8,7 @@ It's a single-page framework application made with:
 
 * HTML
 * CSS / mobile responsive
+* Javascript
 * Vue.js
 * Node.js
 * Express
@@ -38,6 +39,8 @@ By clicking on an image it opens in bigger as an overlay and users can write com
 Images taken from Instagram accounts such as Cottweiler, Fashion For Bank Robbers, Craig Green, Kikokostadinov, Ren Hang, Walter Van Beirendonck, combined with images of a photo series that I made in collaboration with the photographer Eva Baramsky.
 
 ## Mobile responsive
+
+Images drop in a vertical line in responsive version.
 
 ![Alt Text](iphonex.png)
 

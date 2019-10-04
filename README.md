@@ -1,21 +1,37 @@
 # Image-board
 
-This site is a plain Instagram-inspired image-board to upload pictures and post comments by users. I named it "Why do we communicate?", to show that inner feelings can be expressed by photos. With these pictures mostly from fashion designers and photographers on the edge, I'd also like to say, dress the way you feel.
+This site is a plain Instagram-inspired image-board to upload pictures and write comments by users. I named it "Why do we communicate?", to show that inner feelings can be expressed by photos and visually communicated. We are actually communicating all time by using such apps as Instagram.
 
-It's a single-page application made with:
+# Tech Stack
 
+It's a single-page framework application made with:
+
+* HTML
+* CSS / mobile responsive
 * Vue.js
 * Node.js
 * Express
-* AWS
-* SQL and Postgres:
+* AWS S3
+* Multer
+* PostgreSQL:
 
        Including a database with two tables:
               - Uploading images with title, description and username
               - Posting comments with username
 
+## Demo image-board
+
+![Alt Text](board.gif)
+
+The project was made in one week during my training at SPICED Academy Berlin.
+
+## Uploading image
+
+![Alt Text](uploading.gif)
 
 ## Posting comment
+
+By clicking on an image it opens in bigger as an overlay and user's can write comments.
 
 ![Alt Text](comments.gif)
 

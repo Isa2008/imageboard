@@ -22,31 +22,15 @@ const uploader = multer({
         fileSize: 2097152
     }
 });
-////////////////////////////////
 
 //// FRONTEND ////
 app.use(express.static("public"));
-
 app.use(express.json());
 
 //// GET IMAGES JSON ////
 app.get("/images", (req, res) => {
     db.getImages()
         .then(result => {
-            // console.log(result);
-            res.json(result);
-        })
-        .catch(err => {
-            console.log(err);
-        });
-});
-
-//// SHOW ME MORE IMAGES BUTTON ////
-app.get("/getmore/:id", (req, res) => {
-    console.log("something");
-    db.getMoreImages(req.params.id)
-        .then(result => {
-            console.log(result);
             res.json(result);
         })
         .catch(err => {
@@ -76,48 +60,44 @@ app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
     const { title, username, description } = req.body;
     db.addImage(url, username, title, description)
         .then(result => {
-            // console.log(result);
             res.json(result.rows[0]);
         })
         .catch(err => {
             console.log(err);
         });
-    // req.file - the file that was just uploaded!
-    // req.body - refers to the values we type in the input fields
-    // if (req.file) {
-    //     res.json({
-    //         success: true
-    //     });
-    // } else {
-    //     res.json({
-    //         success: false
-    //     });
-    // }
 });
 
 //// GET THE COMMENT AND USERNAME THAT IS ENTERED ////
 app.get("/comments/:id", (req, res) => {
-    // console.log("On Comments Route");
     db.getComments(req.params.id)
         .then(result => {
-            // console.log("Result is: ", result);
             res.json(result);
         })
         .catch(err => {
-            console.log("Insert comments error", err);
+            console.log("get comments error: ", err);
         });
 });
 
-//// SEND BACK THE COMMENT AND USERNAME THAT IS ENTERED ////
+//// POST THE COMMENT AND USERNAME THAT IS ENTERED ////
 app.post("/comment", (req, res) => {
-    // console.log("/comment");
     const { comment, username, id } = req.body;
     db.insertComment(comment, username, id)
         .then(result => {
             res.json(result);
         })
         .catch(err => {
-            console.log("Uploading comments error", err);
+            console.log("post comments error: ", err);
+        });
+});
+
+//// BUTTON: GET MORE IMAGES ////
+app.get("/getmore/:id", (req, res) => {
+    db.getMoreImages(req.params.id)
+        .then(result => {
+            res.json(result);
+        })
+        .catch(err => {
+            console.log("get more images error: ", err);
         });
 });
 

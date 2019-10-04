@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/css/styles.css">
-        <title>IMAGE BOARD</title>
+        <title>IMAGE-BOARD</title>
     </head>
 <body>
 
@@ -14,90 +14,65 @@
     </header>
 
     <div id="main">
-
         <div v-for="image in images">
-            <!-- <h1 @click="showModalMethod(image.name)">{{ image.name }}</h1> -->
         </div>
-
         <image-modal
         v-if="id"
         :id="id"
         @close="closeModalOnParent"
         ></image-modal>
-
         <form class="inputfield">
             <input v-model="title" type="text" name="title" placeholder="title" class="input">
             <input v-model="description" type="text" name="description" placeholder="description" class="input">
             <input v-model="username" type="text" name="username" placeholder="username" class="input">
-
                 <div class="choosewrapper">
                     <input @change="handleChange" type="file" name="file" accept="image/*" id="file" class="choose">
                     <label for="file">choose image</label>
                     <button @click="handleClick" class="go">GO</button>
                 </div>
         </form>
-
         <div class="card">
             <div class="info" v-for="image in images">
-
-                <!-- <img
-                v-bind:src="image.url" alt=""
-                @click="showModalMethod(image.id)"
-                > -->
-
-                <!-- SHOW IMAGE IN A POPUPBOX WITH ITS IMAGE ID -->
                 <a :href="'#' + image.id">
                     <img v-bind:src="image.url">
                 </a>
-
                 <h3 v-bind:class="myUserColor"> {{image.username}}</h3>
                 <h2>{{image.title}}</h2>
                 <h4>{{image.description}}</h4>
             </div>
         </div>
-
         <footer>
             <button v-if="showPics" @click="clickMore" type="button" name="button" id="more-button">show more pics</button>
         </footer>
-
     </div>
 
     <!-- VUE COMPONENT -->
     <script id="image-modal-template" type="text/x-template">
-
-<div class="modalwrapper">
-<div class="modalbox">
-        <div id="popupbox">
-            <div class="imgcontainer">
-
-                <p @click='closeModal'>x</p>
-
-                <img :src="image.url">
-
-                <h3>{{image.username}}</h3>
-                <h2>{{image.title}}</h2>
-                <h4>{{image.description}}</h4>
-
-                <form class="inputfield">
-                    <h5>
-                    <input v-model="comment" type="text" name="comment" placeholder="comment" class="input" id="writecomment">
-                    <input v-model="cusername" type="text" name="cusername" placeholder="username" class="input">
-                    </h5>
-                    <h5>
-                    <button @click="handleClick" class="go">GO</button>
-                    </h5>
-                </form>
-            </div>
-
-            <div class="comments" v-for="comment in comments">
-                <h3><em>{{comment.username}}</em></h3>  <h6>{{comment.comment}}</h6>
+        <div class="modalwrapper">
+            <div class="modalbox">
+                <div id="popupbox">
+                    <div class="imgcontainer">
+                        <p @click='closeModal'>x</p>
+                        <img :src="image.url">
+                        <h3>{{image.username}}</h3>
+                        <h2>{{image.title}}</h2>
+                        <h4>{{image.description}}</h4>
+                        <form class="inputfield">
+                            <h5>
+                            <input v-model="comment" type="text" name="comment" placeholder="comment" class="input" id="writecomment">
+                            <input v-model="cusername" type="text" name="cusername" placeholder="username" class="input">
+                            </h5>
+                            <h5>
+                            <button @click="handleClick" class="go">GO</button>
+                            </h5>
+                        </form>
+                    </div>
+                    <div class="comments" v-for="comment in comments">
+                        <h3><em>{{comment.username}}</em></h3>  <h6>{{comment.comment}}</h6>
+                    </div>
+                </div>
             </div>
         </div>
-            <!-- <h1>My image modal template !!!</h1>
-            <h1 @click="myClick">{{ header }}</h1> -->
-</div>
-</div>
-
     </script>
 
     <script src="/js/vue.js"></script>

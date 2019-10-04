@@ -1,9 +1,7 @@
 const spicedPg = require("spiced-pg");
-
 const db = spicedPg(`postgres:postgres:postgres@localhost:5432/imageboard`);
 
 exports.getImages = function() {
-    console.log("addImages");
     return db
         .query(
             `SELECT url, username, title, description, id
@@ -17,7 +15,6 @@ exports.getImages = function() {
 };
 
 exports.getMoreImages = function(lastId) {
-    console.log("getMoreImages");
     return db
         .query(
             `SELECT *, (
@@ -35,7 +32,6 @@ exports.getMoreImages = function(lastId) {
 };
 
 exports.addImage = function(url, username, title, description) {
-    console.log("getImages");
     return db.query(
         `INSERT INTO images (url, username, title, description)
             VALUES ($1, $2, $3, $4)
@@ -45,7 +41,6 @@ exports.addImage = function(url, username, title, description) {
 };
 
 exports.getImageId = function(id) {
-    console.log("getImageId");
     return db.query(
         `SELECT url, username, title, description
             FROM images
@@ -55,7 +50,6 @@ exports.getImageId = function(id) {
 };
 
 exports.getComments = function(id) {
-    console.log("getComments");
     return db
         .query(
             `SELECT *
@@ -70,7 +64,6 @@ exports.getComments = function(id) {
 };
 
 exports.insertComment = function(comment, username, image_id) {
-    console.log("insertComment");
     return db
         .query(
             `INSERT INTO comments (comment, username, image_id)
@@ -82,12 +75,3 @@ exports.insertComment = function(comment, username, image_id) {
             return rows;
         });
 };
-
-// BONUS FEATURES
-// subqueries for add previous and next images
-// (
-//     SELECT id FROM images
-//     WHERE id < $1
-//     ORDER BY id ASC
-//     LIMIT 1
-// ) as "prevId"

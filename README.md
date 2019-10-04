@@ -39,5 +39,5 @@ Images taken from Instagram accounts such as Cottweiler, Fashion For Bank Robber
 
 ## Mobile responsive
 
-![Alt Text](iphone-x.png) ![Alt Text](responsive.png)
+![Alt Text](iphonex.png)
 

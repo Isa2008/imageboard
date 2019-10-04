@@ -1,6 +1,6 @@
 # Image-board
 
-This site is a plain Instagram-inspired image-board to upload pictures and write comments by users. I named it "Why do we communicate?", to show that inner feelings can be expressed by photos and visually communicated. We are actually communicating all time by using such apps as Instagram.
+This site is a plain Instagram-inspired image-board to upload pictures and write comments with a username. I named it "Why do we communicate?", to show that inner feelings can be expressed by photos and visually communicated. We are communicating all time by using such apps as Instagram.
 
 # Tech Stack
 
@@ -23,7 +23,7 @@ It's a single-page framework application made with:
 
 ![Alt Text](board.gif)
 
-The project was made in one week during my training at SPICED Academy Berlin.
+The project was made in one week during my training at SPICED Academy Berlin. They provided me with a package.json.
 
 ## Uploading image
 
@@ -31,7 +31,7 @@ The project was made in one week during my training at SPICED Academy Berlin.
 
 ## Posting comment
 
-By clicking on an image it opens in bigger as an overlay and user's can write comments.
+By clicking on an image it opens in bigger as an overlay and users can write comments.
 
 ![Alt Text](comments.gif)
 

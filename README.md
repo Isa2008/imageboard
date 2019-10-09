@@ -11,7 +11,7 @@ It's a single-page framework application made with:
 * HTML, CSS/RWD, Javascript, Vue.js, Node.js, Express, AWS/S3, Multer, PostgreSQL
 
        Including a database with two tables:
-              - Upload image with title, description and username
+              - Upload image with title, description, username
               - Post comment with username
 
 ## Demo image-board

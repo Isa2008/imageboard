@@ -2,7 +2,7 @@
 
 ![Alt Text](demo-pics-gifs/image-board.png)
 
-This site is a plain Instagram-inspired image-board to upload pictures and write comments with username. I named it "Why do we communicate?", to show that inner feelings can be expressed by photos and visually communicated. We are communicating all time by using such apps as Instagram.
+This site is a plain Instagram-inspired image-board to upload pictures and write comments with a username. I named it "Why do we communicate?", to show that inner feelings can be expressed by photos and visually communicated. We are communicating all time by using such apps as Instagram.
 
 # Tech Stack
 
@@ -11,8 +11,8 @@ It's a single-page framework application made with:
 * HTML, CSS/RWD, Javascript, Vue.js, Node.js, Express, AWS/S3, Multer, PostgreSQL
 
        Including a database with two tables:
-              - Uploading images with title, description and username
-              - Posting comments with username
+              - Upload image with title, description and username
+              - Post comment with username
 
 ## Demo image-board
 

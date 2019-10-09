@@ -12,13 +12,11 @@
             };
         },
         mounted: function() {
-            // console.log("this in component: ", this);
             var me = this;
             axios
                 .get("/images/" + this.id)
                 .then(function(response) {
                     me.image = response.data.rows[0];
-                    // console.log("image response data is: ", response.data);
                 })
                 .catch(err => {
                     console.log("err in get /images + id: ", err);
@@ -27,7 +25,6 @@
             axios
                 .get("/comments/" + this.id)
                 .then(function(response) {
-                    // console.log("data from comment is: ", response.data);
                     me.comments = response.data;
                 })
                 .catch(err => {
@@ -39,9 +36,7 @@
             id: function() {
                 var me = this;
                 axios.get("/image/" + this.id).then(function(response) {
-                    // console.log("image data is: ", response.data);
                 });
-                // console.log(me.images);
             }
         },
 
@@ -51,18 +46,15 @@
             },
 
             myClick: function() {
-                // console.log("myClick is running");
             },
 
             handleClick: function(e) {
                 e.preventDefault();
-                // console.log("this: ", this);
                 var commentData = {
                     comment: this.comment,
                     username: this.cusername,
                     id: this.id
                 };
-                // console.log("Data I'm passing to Server ", commentData);
 
                 var me = this;
 
@@ -72,11 +64,10 @@
                         me.comments.unshift(res.data[0]);
                     })
                     .catch(function(err) {
-                        console.log("err in Post /comment: ", err);
+                        console.log("err in post /comment: ", err);
                     });
             },
             clickMore: function() {
-                // console.log("clickMore button is running");
             }
         }
     });
@@ -97,14 +88,12 @@
         },
 
         mounted: function() {
-            // console.log("My vue has mounted!");
             var me = this;
             axios.get("/images").then(function(response) {
                 me.images = response.data;
             });
 
             addEventListener("hashchange", function() {
-                // console.log("location.hash: ", location.hash);
                 if (
                     location.hash.slice(1) != "" &&
                     !isNaN(location.hash.slice(1))
@@ -120,13 +109,10 @@
         methods: {
             clickMore: function() {
                 var me = this;
-                // console.log("clickMore button is running: ", this.images);
                 axios
                     .get("/getmore/" + this.images[this.images.length - 1].id)
                     .then(function(response) {
-                        // console.log(response.data);
                         me.images.push(...response.data);
-                        // console.log("lowestId: ", response.data[0].lowestId);
                         if (
                             response.data[0].lowestId ==
                             me.images[me.images.length - 1].id
@@ -144,14 +130,12 @@
             },
 
             showModalMethod: function(id) {
-                // console.log("id: ", id);
                 this.showModal = true;
                 this.id = id;
             },
 
             handleClick: function(e) {
                 e.preventDefault();
-                // console.log("this: ", this);
                 var formData = new FormData();
                 formData.append("title", this.title);
                 formData.append("description", this.description);
@@ -175,7 +159,6 @@
             },
 
             myImageBoard: function(imageName) {
-                // console.log("myImageBoard is running!", imageName);
             }
         }
     });

@@ -34,20 +34,18 @@ app.get("/images", (req, res) => {
             res.json(result);
         })
         .catch(err => {
-            console.log(err);
+            console.log("get /images error", err);
         });
 });
 
 //// GET IMAGE THAT IS CLICKED ON ////
 app.get("/images/:id", (req, res) => {
-    // console.log(req.params.id);
     db.getImageId(req.params.id)
         .then(result => {
-            // console.log(result);
             res.json(result);
         })
         .catch(err => {
-            console.log(err);
+            console.log("get /images + id error: ", err);
         });
 });
 
@@ -63,7 +61,7 @@ app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
             res.json(result.rows[0]);
         })
         .catch(err => {
-            console.log(err);
+            console.log("post /upload error: ", err);
         });
 });
 
@@ -74,7 +72,7 @@ app.get("/comments/:id", (req, res) => {
             res.json(result);
         })
         .catch(err => {
-            console.log("get comments error: ", err);
+            console.log("get /comments + id error: ", err);
         });
 });
 
@@ -86,7 +84,7 @@ app.post("/comment", (req, res) => {
             res.json(result);
         })
         .catch(err => {
-            console.log("post comments error: ", err);
+            console.log("post /comment error: ", err);
         });
 });
 
@@ -97,7 +95,7 @@ app.get("/getmore/:id", (req, res) => {
             res.json(result);
         })
         .catch(err => {
-            console.log("get more images error: ", err);
+            console.log("get /getmore + id error: ", err);
         });
 });
 

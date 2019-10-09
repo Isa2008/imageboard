@@ -7,12 +7,10 @@
         <title>IMAGE-BOARD</title>
     </head>
 <body>
-
     <header>
         <h1>Why do we communicate?</h1>
         <p></p>
     </header>
-
     <div id="main">
         <div v-for="image in images">
         </div>
@@ -45,7 +43,6 @@
             <button v-if="showPics" @click="clickMore" type="button" name="button" id="more-button">show more pics</button>
         </footer>
     </div>
-
     <!-- VUE COMPONENT -->
     <script id="image-modal-template" type="text/x-template">
         <div class="modalwrapper">
@@ -74,7 +71,6 @@
             </div>
         </div>
     </script>
-
     <script src="/js/vue.js"></script>
     <script src="/js/axios.min.js"></script>
     <script src="/js/script.js"></script>

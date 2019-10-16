@@ -20,11 +20,11 @@ It's a single-page framework application made with:
 
 The project was made in one week during my training at SPICED Academy Berlin. They provided me with a package.json.
 
-### Uploading image
+## Uploading image
 
 ![Alt Text](demo-pics-gifs/uploading.gif)
 
-### Posting comment
+## Posting comment
 
 By clicking on an image it opens as an overlay and users can write comments.
 
@@ -32,7 +32,7 @@ By clicking on an image it opens as an overlay and users can write comments.
 
 Images taken from Instagram accounts such as Cottweiler, Fashion For Bank Robbers, Craig Green, Kikokostadinov, Ren Hang, Walter Van Beirendonck, combined with photos of a series that I made in collaboration with the photographer Eva Baramsky.
 
-### Mobile responsive
+## Mobile responsive
 
 Images drop in a vertical line in responsive version.
 

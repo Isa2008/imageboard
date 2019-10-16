@@ -14,7 +14,7 @@ It's a single-page framework application made with:
               - Upload image with title, description, username
               - Post comment with username
 
-## Demo image-board
+# Demo image-board
 
 ![Alt Text](demo-pics-gifs/board.gif)
 
